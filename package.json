@@ -4,6 +4,8 @@
   "description": "notification server",
   "main": "app.js",
   "scripts": {
+    "start": "node server.js",
+    "pretest": "mongo ./test/setup.testdb.js",
     "test": "node_modules/.bin/mocha --opts mocha.opts"
   },
   "repository": {
@@ -22,11 +24,15 @@
   },
   "homepage": "https://github.com/appztreme/NotifierDemoServer#readme",
   "dependencies": {
+    "body-parser": "1.15.0",
+    "compression": "1.6.1",
     "express": "4.13.4",
+    "jsonwebtoken": "6.2.0",
     "mongoose": "4.4.14"
   },
   "devDependencies": {
     "expect": "1.18.0",
-    "mocha": "2.4.5"
+    "mocha": "2.4.5",
+    "supertest": "1.2.0"
   }
 }
